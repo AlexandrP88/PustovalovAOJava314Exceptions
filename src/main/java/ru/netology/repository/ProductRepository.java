@@ -19,9 +19,9 @@ public class ProductRepository {
         return items;
     }
 
-        public void removeById(int id) {
+    public void removeById(int id) {
         if (findById(id) == null) {
-            throw  new NotFoundException("Element with id: " + id + " not found");
+            throw new NotFoundException("Element with id: " + id + " not found");
         }
         int length = items.length - 1;
         Product[] tmp = new Product[length];
@@ -43,5 +43,5 @@ public class ProductRepository {
         }
         return null;
 
-}
+    }
 }
